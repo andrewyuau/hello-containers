@@ -19,7 +19,7 @@ var PORT = 80;
 
 var app = express();
 app.get('/', function (req, res) {
-  res.send('Welcome to Bluemix DevOps with Docker. Let\'s go use the Continuous Delivery Service with Slack!!!');
+  res.send('Hi AGL! Welcome to Bluemix DevOps with Docker. Let\'s go use the Continuous Delivery Service with Slack!!!');
 });
 
 app.listen(PORT)
