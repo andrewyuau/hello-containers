@@ -13,18 +13,6 @@
 *   See the License for the specific language governing permissions and
 **/
 
-/*var express = require('express');
-
-var PORT = 80;
-
-var app = express();
-app.get('/', function (req, res) {
-  res.send('Welcome to Bluemix DevOps with Docker. Let\'s go use the Continuous Delivery Service with Slack!!!');
-});
-
-app.listen(PORT)
-console.log(' Application Running on port' + PORT);*/
-
 var http = require('http');
 var requests=0;
 var podname= process.env.HOSTNAME;
@@ -33,9 +21,9 @@ var host;
 var handleRequest = function(request, response) {
   response.setHeader('Content-Type', 'text/plain');
   response.writeHead(200);
-  response.write("Hello Kubernetes bootcamp! | Running on: ");
+  response.write("Hello from Kubernetes! | Running on: ");
   response.write(host);
-  response.end(" | v=2\n");
+  response.end(" | v=1\n");
   console.log("Running On:" ,host, "| Total Requests:", ++requests,"| App Uptime:", (new Date() - startTime)/1000 , "seconds", "| Log Time:",new Date());
 }
 var www = http.createServer(handleRequest);
